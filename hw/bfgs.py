@@ -13,16 +13,19 @@ import matplotlib.pyplot as plt
 def objf(x):
     return(sin(5*x) +0.1*x**2)
 
-nx = 100
+nx = 10
 starts = linspace(-10,10,nx)
+objx = linspace(-10,10,100)
 
 mins = []
 for i in range(nx):
     mins = mins + [opt.minimize(objf,starts[i],method='BFGS').x]
-    
-    
-plt.plot(starts,mins,label='Minima')
-plt.plot(starts,objf(starts),label='Objective function',ls='dashed',color='red')
+
+mins = array(mins)
+plt.plot(objx,objf(objx),label='Objective function',ls='dashed',color='red')
+plt.scatter(starts,objf(starts),label=r'Starting points',color='blue')
+plt.scatter(mins,objf(mins),label=r'Objective fcn(minima)',marker='x',color='blue')
+
 plt.title(r'Initial guess $x_0$ vs minimization')
 plt.xlabel('Initial guess $x_0$')
 plt.ylabel('Minimal value $x$')
