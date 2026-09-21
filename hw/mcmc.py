@@ -63,6 +63,9 @@ realx = linspace(-20,20,nsamp)
 realy = p(realx)
 plt.plot(realx,realy,label=r'p(x)',color='red',lw=2)
 plt.hist(mcxs,bins=40,density=True,color='skyblue',label='Metro-Hastings samples')
+plt.xlabel('x')
+plt.ylabel('P(x)')
+plt.title('Test MCMC Metro-Hastings algo samples')
 
 plt.show()
 
