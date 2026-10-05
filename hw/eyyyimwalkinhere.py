@@ -26,6 +26,7 @@ def model(theta, x):
     a, b = theta
     return a + b * x
 
+
 def log_likelihood(theta, x, y, yerr):
     m = model(theta, x)
     return -0.5 * np.sum((y - m) ** 2 / yerr**2)
