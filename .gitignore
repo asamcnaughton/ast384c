@@ -1,0 +1,32 @@
+.env
+*.env
+.env.local
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Common package manager directories
+node_modules/
+jspm_packages/
+.pnpm-store/
+
+# Log files and diagnostics
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.h5
+
+.hdf5
+*.he5
+
+# Temporary or backup HDF5 files
+*.h5~
+*.bak
+*.tmp
+
+# Python / Jupyter Notebook artifacts (if applicable)
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
